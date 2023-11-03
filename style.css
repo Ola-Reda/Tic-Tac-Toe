@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background:#56baed;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/*start header*/
+header {
+    position: absolute;
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px 25px;
+    display: none;
+}
+
+header h1 {
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 6px;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 22px;
+    font-weight: 500;
+    padding-top: 14px;
+    margin-bottom: 14px;
+}
+
+header .btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header button {
+    width: 100%;
+    background: #56baed;
+    color: white;
+    font-size: 20px;
+    padding: 9px 0px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #56baed;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: .4s ease-in;
+}
+
+header button:hover {
+    transform: scale(.95);
+}
+/*end header*/
+/*start main*/
+main {
+    position: absolute;
+    display: none;
+}
+
+main .info {
+    background-color: white;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+main .player {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+main .info p {
+    font-size: 22px;
+    font-weight: 500;
+    padding: 10px 0;
+    color: #56baed;
+}
+
+main .area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+main .area .box {
+    background-color: white;
+    color: #56baed;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 2.5;
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+}
+/*end main*/
+/*start section result*/
+
+/*end section result*/
