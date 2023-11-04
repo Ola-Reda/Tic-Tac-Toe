@@ -25,7 +25,8 @@ header {
     background-color: white;
     border-radius: 5px;
     padding: 30px 25px;
-    display: none;
+    z-index: 111;
+    transition: all .2s ease-in;
 }
 
 header h1 {
@@ -66,10 +67,21 @@ header button:hover {
     transform: scale(.95);
 }
 /*end header*/
+.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.9);
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
 /*start main*/
 main {
     position: absolute;
-    display: none;
+    transition: all .3s ease-in;
 }
 
 main .info {
@@ -83,6 +95,7 @@ main .player {
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    position: relative;
 }
 
 main .info p {
@@ -90,6 +103,37 @@ main .info p {
     font-weight: 500;
     padding: 10px 0;
     color: #56baed;
+    position: relative;
+    z-index: 11;
+    transition: .3s ease;
+}
+
+main .info p:first-child {
+    color: white;
+}
+
+main .info .player.active p:first-child {
+    color: #56baed;
+}
+
+main .info .player.active p:nth-child(2) {
+    color: white;
+}
+
+main .info .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #56baed;
+    color: white;
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+    transition: .3s ease;
+}
+
+main .info .player.active .slider {
+    left: 50%;
 }
 
 main .area {
@@ -113,5 +157,27 @@ main .area .box {
 }
 /*end main*/
 /*start section result*/
+.result {
+    position: absolute;
+    transition: all .3s ease-in;
+    background: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 25px;
+}
 
+.result p {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.result button {
+    background-color: #56baed;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #56baed;
+    border-radius: 5px;
+    padding: 8px 18px;
+}
 /*end section result*/
